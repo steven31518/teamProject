@@ -55,7 +55,7 @@
     <!-- Full screen modal -->
     <button
       type="button"
-      class="btn btn-light fixed-top menu fs-5 fw-bold"
+      class="btn btn-light fixed-top m-3 menu fs-5 fw-bold"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -72,8 +72,11 @@
     >
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-          <div class="modal-header text-center">
-            <h1 class="modal-title fs-1 fw-bold" id="exampleModalLabel">
+          <div class="modal-header d-flex">
+            <h1
+              class="modal-title fs-1 fw-bold align-self-center"
+              id="exampleModalLabel"
+            >
               MENU
             </h1>
             <button
@@ -86,33 +89,53 @@
           <div class="modal-body">
             <div class="container">
               <div class="row">
-                <div class="col-6 col-md-6 col-lg-8">
+                <div class="col-4 col-md-6 col-lg-8">
                   <h1>台灣原民部落之旅</h1>
                 </div>
-                <div class="col-6 col-md-6 col-lg-4 fs-1 text-center">
-                  <a
-                    class="nav-link me-lg-5 me-sm-0 active"
-                    aria-current="page"
-                    href="#"
-                    >返回首頁</a
+                <div class="col-8 col-md-6 col-lg-4">
+                  <button
+                    type="button"
+                    class="btn fs-2 fw-bold mb-5 d-block"
+                    data-bs-dismiss="modal"
                   >
-                  <a class="nav-link me-lg-5 me-sm-0" href="#">部落故事</a>
-                  <a class="nav-link me-lg-5 me-sm-0" href="#">部落體驗</a>
-                  <a class="nav-link me-lg-5 me-sm-0" href="#">雲遊四海</a>
-                  <a class="nav-link me-lg-5 me-sm-0" href="#">部落地圖</a>
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >返回首頁</a
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="btn fs-2 fw-bold mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a class="nav-link" href="#">部落故事</a>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn fs-2 fw-bold mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a class="nav-link" href="#">部落體驗</a>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn fs-2 fw-bold mb-5 d-block"
+                    data-bs-dismiss="modal"
+                  >
+                    <a class="nav-link" href="#">雲遊四海</a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="modal-footer">
-            <button
+            <!-- <button
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
@@ -224,23 +247,27 @@
 
     <script>
       //menu關閉效果
-      const link = document.querySelectorAll(".nav-link");
+      // const link = document.querySelectorAll(".nav-link");
 
-      link.forEach((item) => {
-        item.addEventListener("click", () => {
-          let modal = document.querySelector("#exampleModal");
-          let backdrop = document.querySelector(".modal-backdrop");
-          let body = document.querySelector("body");
-          console.dir(modal);
-          if (modal.classList.contains("show")) {
-            backdrop.remove();
-            modal.style = "display:none";
-            body.classList.remove("modal-open");
-            body.removeAttribute("style");
-          } else {
-          }
-        });
-      });
+      // link.forEach((item) => {
+      //   item.addEventListener("click", () => {
+      //     let modal = document.querySelector("#exampleModal");
+      //     let backdrop = document.querySelector(".modal-backdrop");
+      //     let body = document.querySelector("body");
+      //     console.dir(modal);
+      //     if (modal.classList.contains("show")) {
+      //       backdrop.remove();
+      //       modal.style = "display:none";
+      //       body.classList.remove("modal-open");
+      //       body.style = "";
+      //       modal.ariaHidden = "true";
+      //       modal.removeAttribute("role");
+      //       modal.removeAttribute("aria-modal");
+      //       modal.classList.remove("show");
+      //     } else {
+      //     }
+      //   });
+      // });
 
       //parallax效果
       var scene = document.getElementById("scene");
