@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 fixed-top">
       <div class="container-fluid px-4 px-lg-5 d-flex justify-content-between">
         <a class="navbar-brand ms-lg-5 ms-sm-0 fs-3 fw-bold" href="#"
-          >原鄉部落之旅</a
+          >台灣原鄉部落之旅</a
         >
         <button
           class="navbar-toggler"
@@ -37,7 +37,7 @@
           class="collapse navbar-collapse justify-content-end"
           id="navbarNavAltMarkup"
         >
-          <div class="navbar-nav me-lg-5 me-sm-0 fs-5">
+          <div class="navbar-nav me-lg-5 me-sm-0 fs-5 fw-bold">
             <a
               class="nav-link me-lg-5 me-sm-0 active"
               aria-current="page"
@@ -141,9 +141,9 @@
           id="scene"
           class="d-flex justify-content-center align-item-center position-relative"
         >
-          <div class="position-absolute bottom-50 start-50" data-depth="0.3">
+          <!-- <div class="position-absolute bottom-50 start-50" data-depth="0.3">
             My first Layer!
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -157,6 +157,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
     <script>
+      //parallax效果
       var scene = document.getElementById("scene");
       var parallaxInstance = new Parallax(scene, {
         relativeInput: true,
