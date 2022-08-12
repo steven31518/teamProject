@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   body {
+    .menu {
+      width: 200px;
+    }
     section.banner {
       img {
         object-fit: contain;

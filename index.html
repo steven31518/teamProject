@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 fixed-top">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 fixed-top">
       <div class="container-fluid px-4 px-lg-5 d-flex justify-content-between">
         <a class="navbar-brand ms-lg-5 ms-sm-0 fs-3 fw-bold" href="#"
           >台灣原鄉部落之旅</a
@@ -51,8 +51,74 @@
           </div>
         </div>
       </div>
-    </nav>
-    <section class="banner mb-5">
+    </nav> -->
+    <!-- Full screen modal -->
+    <button
+      type="button"
+      class="btn btn-light fixed-top menu"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      MENU
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h1 class="modal-title fs-1 fw-bold" id="exampleModalLabel">
+              MENU
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 col-lg-9">
+                  <h1>台灣原民部落之旅</h1>
+                </div>
+                <div class="col-6 col-lg-3 fs-1 text-center">
+                  <a
+                    class="nav-link me-lg-5 me-sm-0 active"
+                    aria-current="page"
+                    href="#"
+                    >返回首頁</a
+                  >
+                  <a class="nav-link me-lg-5 me-sm-0" href="#">部落故事</a>
+                  <a class="nav-link me-lg-5 me-sm-0" href="#">部落體驗</a>
+                  <a class="nav-link me-lg-5 me-sm-0" href="#">雲遊四海</a>
+                  <a class="nav-link me-lg-5 me-sm-0" href="#">部落地圖</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner -->
+    <section class="banner m-5">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="p-0 col-12 col-lg-10">
