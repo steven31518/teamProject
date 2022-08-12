@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
 
-    <title>Hello, world!</title>
+    <title>部落原鄉之旅</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -55,7 +55,7 @@
     <!-- Full screen modal -->
     <button
       type="button"
-      class="btn btn-light fixed-top menu"
+      class="btn btn-light fixed-top menu fs-5 fw-bold"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -86,10 +86,10 @@
           <div class="modal-body">
             <div class="container">
               <div class="row">
-                <div class="col-6 col-lg-9">
+                <div class="col-6 col-md-6 col-lg-8">
                   <h1>台灣原民部落之旅</h1>
                 </div>
-                <div class="col-6 col-lg-3 fs-1 text-center">
+                <div class="col-6 col-md-6 col-lg-4 fs-1 text-center">
                   <a
                     class="nav-link me-lg-5 me-sm-0 active"
                     aria-current="page"
@@ -223,6 +223,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
     <script>
+      //menu關閉效果
+      const link = document.querySelectorAll(".nav-link");
+
+      link.forEach((item) => {
+        item.addEventListener("click", () => {
+          let modal = document.querySelector("#exampleModal");
+          let backdrop = document.querySelector(".modal-backdrop");
+          let body = document.querySelector("body");
+          console.dir(modal);
+          if (modal.classList.contains("show")) {
+            backdrop.remove();
+            modal.style = "display:none";
+            body.classList.remove("modal-open");
+            body.removeAttribute("style");
+          } else {
+          }
+        });
+      });
+
       //parallax效果
       var scene = document.getElementById("scene");
       var parallaxInstance = new Parallax(scene, {
